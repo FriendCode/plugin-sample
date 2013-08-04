@@ -1,0 +1,12 @@
+{
+    "name": "Sample",
+    "description": "Sample test plugin",
+    "version": 1,
+    "tags": [
+        "sample"
+    ],
+    "permissions": [],
+    "offline": true,
+    "frame": "panel",
+    "files": ["*"]
+}

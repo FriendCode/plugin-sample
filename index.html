@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/addonslib/style.css">
+        <script src="/static/addonslib/library.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    </head>
+    <body class="plugin-pane">
+        <div class="plugin-header">
+            <h4 class="title">Sample</h4>
+        </div>
+        <div class="plugin-body">
+            <div id="result"></div>
+        </div>
+        <script>
+            (function () {
+                var countText = function(source) {
+                    if (source != null) {
+                        $("#result").text(source.length+" characters");
+                    }
+                }
+                
+                api.files.read(null, countText);
+                api.on("file/change", countText);
+            }());
+        </script>
+    </body>
+</html>
